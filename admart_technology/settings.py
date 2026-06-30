@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mysite',
     'account',
-    'admin',
     'guest',
     'instructor',
     'student',
