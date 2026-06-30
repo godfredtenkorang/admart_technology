@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google analytics script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KG9MT6V1Z"></script>
+
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ADMART Technology{% endblock %}</title>
+
+    <!-- SEO information -->
+    <meta name="description" content="AdMart Technology Learning Management System for online IT courses, certifications, and digital learning.">
+    <meta name="keywords" content="AdMart, LMS, online courses, IT training, certifications, e-learning">
+    <meta name="author" content="ADMART Technology">
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="{% static 'mainStyle.css' %}">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Website header starts here -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <!-- Brand logo links back to homepage -->
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h2>AdMart</h2>
+                    <span>Online Course & Edu</span>
+                </div>
+            </a>
+
+            <!-- Desktop navigation links -->
+            <nav class="desktop-navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="courses.html">Courses</a>
+                <a href="bundles.html">Bundles</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+
+            <!-- Header action buttons -->
+            <div class="header-actions">
+
+                <!-- Search button opens the search overlay -->
+                <button class="search-button" id="openSearch" aria-label="Open search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <!-- Main call-to-action button -->
+                <a href="register.html" class="apply-button">
+                    Apply Now <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <!-- Mobile menu button shows only on smaller screens -->
+                <button class="menu-button" id="openMenu" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Mobile navigation menu -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <!-- Close mobile menu button -->
+        <button class="close-menu-button" id="closeMenu" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Mobile navigation links -->
+        <nav class="mobile-navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="bundles.html">Bundles</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="mobile-apply-button">Apply Now</a>
+        </nav>
+    </div>
+
+    <!-- Full screen search overlay -->
+    <div class="search-overlay" id="searchOverlay">
+
+        <!-- Close search overlay button -->
+        <button class="close-search-button" id="closeSearch" aria-label="Close search">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Search input box -->
+        <form class="search-box">
+            <input type="text" placeholder="What are you looking for?" />
+            <button type="submit" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- Page content will load here -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Main JavaScript file -->
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>

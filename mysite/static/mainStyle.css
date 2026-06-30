@@ -1,0 +1,617 @@
+/* Reset default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General website body style */
+body {
+  font-family: Arial, sans-serif;
+  background: #eefaf7;
+}
+
+/* Main sticky header wrapper */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 22px;
+}
+
+/* White rounded header container */
+.header-container {
+  background: #ffffff;
+  border-radius: 38px;
+  padding: 22px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo area */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #111111;
+  flex-shrink: 0;
+}
+
+/* Real logo icon box */
+.logo-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #eefaf7;
+  color: #20b49f;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+}
+
+/* Logo title */
+.logo-text h2 {
+  font-size: 38px;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* Logo small text */
+.logo-text span {
+  font-size: 14px;
+  color: #222222;
+}
+
+/* Desktop navigation links */
+.desktop-navigation {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+/* Each desktop navigation link */
+.desktop-navigation a {
+  text-decoration: none;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+/* Navigation hover effect */
+.desktop-navigation a:hover {
+  color: #20b49f;
+}
+
+/* Right side header buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Search and menu circular buttons */
+.search-button,
+.menu-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #d9e0e6;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  transition: 0.3s ease;
+}
+
+/* Hide menu icon on desktop */
+.menu-button {
+  display: none;
+}
+
+/* Icon button hover effect */
+.search-button:hover,
+.menu-button:hover {
+  border-color: #20b49f;
+  color: #20b49f;
+}
+
+/* Main call-to-action button */
+.apply-button {
+  background: #20b49f;
+  color: #ffffff;
+  padding: 18px 34px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+/* CTA hover effect */
+.apply-button:hover {
+  background: #159b89;
+}
+
+/* Full screen search dark overlay */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Show search overlay when active */
+.search-overlay.active {
+  display: flex;
+}
+
+/* Close search button */
+.close-search-button {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid #20b49f;
+  background: transparent;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Search input container */
+.search-box {
+  width: 100%;
+  max-width: 720px;
+  border: 2px solid #20b49f;
+  border-radius: 50px;
+  padding: 8px 12px 8px 28px;
+  display: flex;
+  align-items: center;
+}
+
+/* Search input field */
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Search placeholder text */
+.search-box input::placeholder {
+  color: #ffffff;
+}
+
+/* Search submit button */
+.search-box button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Mobile menu overlay */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  z-index: 1800;
+  display: none;
+  padding: 30px;
+}
+
+/* Show mobile menu when active */
+.mobile-menu.active {
+  display: block;
+}
+
+/* Close mobile menu button */
+.close-menu-button {
+  float: right;
+  background: #20b49f;
+  color: #ffffff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile navigation wrapper */
+.mobile-navigation {
+  clear: both;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Mobile menu links */
+.mobile-navigation a {
+  text-decoration: none;
+  color: #111111;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Mobile apply button */
+.mobile-apply-button {
+  background: #20b49f;
+  color: #ffffff !important;
+  padding: 16px 22px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* Tablet and mobile layout */
+@media (max-width: 1100px) {
+  /* Hide desktop links on smaller screens */
+  .desktop-navigation {
+    display: none;
+  }
+
+  /* Hide desktop CTA on smaller screens */
+  .apply-button {
+    display: none;
+  }
+
+  /* Show menu button only on smaller screens */
+  .menu-button {
+    display: grid;
+  }
+}
+
+/* Small mobile layout */
+@media (max-width: 600px) {
+  /* Reduce header spacing on mobile */
+  .site-header {
+    padding: 14px;
+  }
+
+  /* Make header container tighter on mobile */
+  .header-container {
+    padding: 16px 18px;
+    border-radius: 28px;
+  }
+
+  /* Reduce logo icon size on mobile */
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+
+  /* Reduce logo title size on mobile */
+  .logo-text h2 {
+    font-size: 28px;
+  }
+
+  /* Reduce logo subtitle size on mobile */
+  .logo-text span {
+    font-size: 11px;
+  }
+
+  /* Make action buttons smaller on mobile */
+  .search-button,
+  .menu-button {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  /* Reduce search input text size on mobile */
+  .search-box input {
+    font-size: 17px;
+  }
+}
+
+
+
+/* Hero section background */
+.hero-section {
+  padding: 80px 22px;
+  background: #f6fffd;
+  overflow: hidden;
+}
+
+/* Hero content container */
+.hero-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+/* Left side content */
+.hero-content {
+  max-width: 650px;
+}
+
+/* Small green title */
+.hero-small-title {
+  color: #20b49f;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Main hero heading */
+.hero-content h1 {
+  color: #102033;
+  font-size: 68px;
+  line-height: 1.15;
+  font-weight: 900;
+  margin-bottom: 28px;
+}
+
+/* Hero paragraph */
+.hero-description {
+  color: #5d6b82;
+  font-size: 20px;
+  line-height: 1.8;
+  max-width: 560px;
+  margin-bottom: 34px;
+}
+
+/* Hero buttons wrapper */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 55px;
+}
+
+/* Main hero button */
+.hero-primary-button {
+  background: #20b49f;
+  color: #ffffff;
+  padding: 20px 34px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Secondary hero button */
+.hero-secondary-button {
+  color: #102033;
+  padding: 18px 30px;
+  border-radius: 40px;
+  border: 1px solid #d9e0e6;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Stats below hero text */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* Single stat item */
+.hero-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Stat icon */
+.hero-stat-item i {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: #e9fbf7;
+  color: #20b49f;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+}
+
+/* Stat number */
+.hero-stat-item h3 {
+  color: #102033;
+  font-size: 26px;
+}
+
+/* Stat label */
+.hero-stat-item span {
+  color: #5d6b82;
+  font-size: 15px;
+}
+
+/* Right side image area */
+.hero-visual {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main image card */
+.hero-image-card {
+  width: 78%;
+  min-height: 520px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #21b7a5, #c5f3ea);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 70px rgba(23, 61, 54, 0.15);
+}
+
+/* Hero image */
+.hero-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Reusable floating card */
+.floating-card {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 22px;
+  box-shadow: 0 20px 50px rgba(16, 32, 51, 0.12);
+}
+
+/* Progress card */
+.progress-card {
+  top: 90px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Progress icon */
+.progress-card i {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #20b49f;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+}
+
+/* Small access card */
+.access-card {
+  top: 120px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Access icon */
+.access-card i {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #7357ff;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+}
+
+/* Weekly time card */
+.time-card {
+  right: 10px;
+  bottom: 60px;
+  width: 210px;
+}
+
+/* Floating card text */
+.floating-card span,
+.time-card p {
+  color: #5d6b82;
+  font-size: 15px;
+}
+
+/* Floating card headings */
+.floating-card h4 {
+  color: #102033;
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+/* Tablet responsive */
+@media (max-width: 1100px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 54px;
+  }
+
+  .hero-visual {
+    min-height: 560px;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 55px 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 480px;
+  }
+
+  .hero-image-card {
+    width: 100%;
+    min-height: 420px;
+  }
+
+  .progress-card {
+    left: 0;
+    top: 30px;
+  }
+
+  .access-card {
+    right: 0;
+    top: 130px;
+  }
+
+  .time-card {
+    right: 0;
+    bottom: 20px;
+  }
+}

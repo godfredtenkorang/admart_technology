@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | ADMART Technology{% endblock %}
+
+{% block content %}
+
+<!-- Hero section starts here -->
+<section class="hero-section">
+
+  <!-- This container keeps the hero content aligned with the header -->
+  <div class="hero-container">
+
+    <!-- Left side hero text -->
+    <div class="hero-content">
+      <p class="hero-small-title">Learn Smart. Learn Digital.</p>
+
+      <h1>
+        The Smarter Way <br>
+        To Learn Online
+      </h1>
+
+      <p class="hero-description">
+        Access high-quality IT courses designed by experts. Learn at your own pace and build the skills you need to grow.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="courses.html" class="hero-primary-button">
+          Explore Courses <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <a href="#" class="hero-secondary-button">
+          <i class="fa-solid fa-play"></i> Watch Video
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat-item">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <div>
+            <h3>15K+</h3>
+            <span>Courses</span>
+          </div>
+        </div>
+
+        <div class="hero-stat-item">
+          <i class="fa-solid fa-users"></i>
+          <div>
+            <h3>150K+</h3>
+            <span>Students</span>
+          </div>
+        </div>
+
+        <div class="hero-stat-item">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <h3>10K+</h3>
+            <span>Certificates</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side hero visual -->
+    <div class="hero-visual">
+
+      <div class="hero-image-card">
+        <img src="{% static 'images/hero-student.png' %}" alt="Student learning online">
+      </div>
+
+      <div class="floating-card progress-card">
+        <i class="fa-solid fa-arrow-trend-up"></i>
+        <div>
+          <span>Progress</span>
+          <h4>75%</h4>
+        </div>
+      </div>
+
+      <div class="floating-card access-card">
+        <i class="fa-solid fa-play"></i>
+        <div>
+          <h4>24/7</h4>
+          <span>Access</span>
+        </div>
+      </div>
+
+      <div class="floating-card time-card">
+        <span>This Week</span>
+        <h4>8.5h</h4>
+        <p>Time Spent</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
